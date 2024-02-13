@@ -1,15 +1,16 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+
 import "./App.css";
-import CarCard from "./components/CarCard";
+
+import Adverts from "./components/Adverts";
 
 function App() {
   
-
   return (
     <>
-      <CarCard />
+      <Adverts />
+      
     </>
   );
 }
