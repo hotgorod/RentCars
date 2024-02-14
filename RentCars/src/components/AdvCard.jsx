@@ -14,9 +14,19 @@ const AdvCard = () => {
       <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src={advert.img} />
         <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>{advert.description}</Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          <Card.Text>
+            {advert.make}
+            {advert.model}
+            {advert.year}
+            {advert.rentalPrice}
+          </Card.Text>
+
+          <Card.Text>
+            {advert.address.split(" ").slice(-2).join(" | ")} |
+            {advert.rentalCompany}| {advert.type}| {advert.model}|
+            {advert.mileage}|{advert.functionalities[0]}
+          </Card.Text>
+          <Button variant="primary">Learn more</Button>
         </Card.Body>
       </Card>
     </div>
