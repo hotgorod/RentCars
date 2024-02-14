@@ -7,7 +7,6 @@ const CarsDropdown = () => {
       .then((response) => response.json())
       .then((data) => {
         setCars(data);
-        
       })
       .catch((error) =>
         console.error("Error fetching makes.json:", error.message)
@@ -15,6 +14,7 @@ const CarsDropdown = () => {
   }, []);
   return (
     <div>
+      <p>Car brand</p>
       <select>
         <option value="">Enter the text</option>
 
