@@ -24,7 +24,7 @@ function ModalCar(props) {
             {props.advert.make}
             {props.advert.model},{props.advert.year}
           </Modal.Title>
-          {props.advert.address.split(" ").slice(-2).join(" | ")} | Id:
+          {props.advert.address.split(", ").slice(-2).join(" | ")} | Id:
           {props.advert.id}| Year {props.advert.year}| Type: {props.advert.type}
           | FuelConsumption: {props.advert.fuelConsumption}| EngineSize:{" "}
           {props.advert.engineSize}
@@ -34,6 +34,7 @@ function ModalCar(props) {
           {props.advert.functionalities[0]}| {props.advert.accessories[2]}|
           {props.advert.functionalities[1]}|{props.advert.functionalities[2]}
           <Modal.Title>Rental conditions:</Modal.Title>
+          {props.advert.rentalConditions.split("\n").join(" | ")}
         </Modal.Body>
         <Modal.Footer>
           <Button variant="primary" onClick={handleClose}>
@@ -45,6 +46,6 @@ function ModalCar(props) {
   );
 }
 ModalCar.propTypes = {
-  advert: PropTypes.string.isRequired,
+  advert: PropTypes.any.isRequired,
 };
 export default ModalCar;

@@ -25,7 +25,7 @@ const AdvCard = () => {
           </Card.Text>
 
           <Card.Text>
-            {advert.address.split(" ").slice(-2).join(" | ")} |
+            {advert.address.split(", ").slice(-2).join(" | ")} |
             {advert.rentalCompany}| {advert.type}| {advert.model}|
             {advert.mileage}|{advert.functionalities[0]}
           </Card.Text>
