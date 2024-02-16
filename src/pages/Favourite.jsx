@@ -1,7 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import AdvCard from "../components/AdvCard";
 import { Button, Card } from "react-bootstrap";
-import ModalCar from "../components/ModalCar";
 import { remove } from "../store/favouriteSlice";
 
 const Favourite = () => {
@@ -27,7 +25,6 @@ const Favourite = () => {
             {advert.rentalCompany}| {advert.type}| {advert.model}|
             {advert.mileage}|{advert.functionalities[0]}
           </Card.Text>
-          {/* <FavouriteButton /> */}
           <Button
             variant="danger"
             size="sm"
@@ -35,7 +32,6 @@ const Favourite = () => {
           >
             Remove
           </Button>{" "}
-          <ModalCar advert={advert} />
         </Card.Body>
       </Card>
     </div>
