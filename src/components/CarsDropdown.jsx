@@ -1,17 +1,10 @@
 import { useEffect, useState } from "react";
-
+import makesData from "./makes.json";
 
 const CarsDropdown = () => {
   const [cars, setCars] = useState([]);
   useEffect(() => {
-    fetch("/src/components/makes.json")
-      .then((response) => response.json())
-      .then((data) => {
-        setCars(data);
-      })
-      .catch((error) =>
-        console.error("Error fetching makes.json:", error.message)
-      );
+    setCars(makesData); 
   }, []);
   return (
     <div>
