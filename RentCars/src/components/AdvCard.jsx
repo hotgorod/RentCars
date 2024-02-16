@@ -1,6 +1,8 @@
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
+
 import { useEffect, useState } from "react";
+import FavouriteButton from "./FavouriteButton";
+import ModalCar from "./ModalCar";
 
 const AdvCard = () => {
   const [adverts, getAdverts] = useState([]);
@@ -9,6 +11,7 @@ const AdvCard = () => {
       data.json().then((result) => getAdverts(result))
     );
   }, []);
+
   const carCards = adverts.map((advert) => (
     <div key={advert.id} className="col-md-3">
       <Card style={{ width: "18rem" }}>
@@ -26,7 +29,8 @@ const AdvCard = () => {
             {advert.rentalCompany}| {advert.type}| {advert.model}|
             {advert.mileage}|{advert.functionalities[0]}
           </Card.Text>
-          <Button variant="primary">Learn more</Button>
+          <FavouriteButton />
+          <ModalCar advert={ advert} />
         </Card.Body>
       </Card>
     </div>

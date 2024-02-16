@@ -1,9 +1,10 @@
+import Adverts from "../components/Adverts";
 
 
 const Catalog = () => {
   return (
     <div>
-      Catalog here!
+      <Adverts/>
     </div>
   );
 }
