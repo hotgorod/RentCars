@@ -4,7 +4,7 @@ import makesData from "./makes.json";
 const CarsDropdown = () => {
   const [cars, setCars] = useState([]);
   useEffect(() => {
-    setCars(makesData); 
+    setCars(makesData); // Set the cars data directly from the imported JSON
   }, []);
   return (
     <div>

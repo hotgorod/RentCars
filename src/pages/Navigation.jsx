@@ -2,7 +2,10 @@ import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { useSelector } from "react-redux";
+
 const Navigation = () => {
+  const favouriteCars = useSelector((state) => state.favourite);
   return (
     <>
       <Navbar bg="light" data-bs-theme="light" fixed="top">
@@ -16,7 +19,7 @@ const Navigation = () => {
               Catalog
             </Nav.Link>
             <Nav.Link to="/favourite" as={Link}>
-              Favourite 0
+              Favourite {favouriteCars.length}
             </Nav.Link>
           </Nav>
         </Container>
