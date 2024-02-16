@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 // import FavouriteButton from "./FavouriteButton";
 import ModalCar from "./ModalCar";
 import { Button } from "react-bootstrap";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import { add } from "../store/favouriteSlice";
 // import {getAdverts} from "../store/advertSlice";
 
